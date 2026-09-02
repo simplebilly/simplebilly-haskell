@@ -1,0 +1,242 @@
+name:           simplebilly
+version:        0.1.0.0
+synopsis:       Auto-generated simplebilly API Client
+description:    .
+                Client library for calling the SimpleBilly API API based on http-client.
+                .
+                host: demo.simplebilly.com
+                .
+                base path: https://demo.simplebilly.com
+                .
+                SimpleBilly API API version: 0.1.0
+                .
+                OpenAPI version: 3.1.0
+                .
+                Generator version: 7.25.0
+                .
+category:       Web
+homepage:       https://openapi-generator.tech
+author:         Author Name Here
+maintainer:     author.name@email.com
+copyright:      YEAR - AUTHOR
+license:        UnspecifiedLicense
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+    openapi.yaml
+
+Flag UseKatip
+  Description: Use the katip package to provide logging (if false, use the default monad-logger package)
+  Default:     True
+  Manual:      True
+
+library
+  hs-source-dirs:
+      lib
+  ghc-options: -Wall -funbox-strict-fields
+  build-depends:
+      aeson >=1.0 && <3.0
+    , base >=4.7 && <5.0
+    , base64-bytestring >1.0 && <2.0
+    , bytestring >=0.10.0
+    , case-insensitive
+    , containers >=0.5.0.0 && <0.8
+    , deepseq >= 1.4 && <1.6
+    , exceptions >= 0.4
+    , http-api-data >= 0.3.4 && <0.7
+    , http-client >=0.5 && <0.8
+    , http-client-tls
+    , http-media >= 0.4 && < 0.9
+    , http-types >=0.8 && <0.13
+    , iso8601-time >=0.1.3 && <0.2.0
+    , microlens >= 0.4.3
+    , mtl >=2.2.1
+    , network >=2.6.2 && <3.9
+    , random >=1.1
+    , safe-exceptions <0.2
+    , text >=0.11 && <3
+    , time >=1.5
+    , transformers >=0.4.0.0
+    , unordered-containers
+    , vector >=0.10.9 && <0.14
+  other-modules:
+      Paths_simplebilly
+  exposed-modules:
+      SimpleBilly
+      SimpleBilly.API
+      SimpleBilly.API.Absence
+      SimpleBilly.API.Activity
+      SimpleBilly.API.Admin
+      SimpleBilly.API.Ai
+      SimpleBilly.API.AnlageEks
+      SimpleBilly.API.AnlageG
+      SimpleBilly.API.AnlageS
+      SimpleBilly.API.Attachment
+      SimpleBilly.API.AttachmentVersion
+      SimpleBilly.API.Auth
+      SimpleBilly.API.Automations
+      SimpleBilly.API.Banking
+      SimpleBilly.API.Billing
+      SimpleBilly.API.Bom
+      SimpleBilly.API.Bookkeeping
+      SimpleBilly.API.Budgets
+      SimpleBilly.API.ComplianceTraining
+      SimpleBilly.API.Contact
+      SimpleBilly.API.Coupon
+      SimpleBilly.API.CreateSepaDirectDebit
+      SimpleBilly.API.CreditNote
+      SimpleBilly.API.Customer
+      SimpleBilly.API.CustomerCommunication
+      SimpleBilly.API.CustomerGroup
+      SimpleBilly.API.Datev
+      SimpleBilly.API.DatevImport
+      SimpleBilly.API.Declaration
+      SimpleBilly.API.DeliveryAppointment
+      SimpleBilly.API.DeliveryDate
+      SimpleBilly.API.DeliveryNote
+      SimpleBilly.API.DownPaymentInvoice
+      SimpleBilly.API.Ebilanz
+      SimpleBilly.API.EmailTemplate
+      SimpleBilly.API.Emissions
+      SimpleBilly.API.Employee
+      SimpleBilly.API.Euer
+      SimpleBilly.API.EventSubscription
+      SimpleBilly.API.Fristen
+      SimpleBilly.API.Gdpr
+      SimpleBilly.API.GenerateQrcode
+      SimpleBilly.API.GenerateXrechnung
+      SimpleBilly.API.Gewerbesteuer
+      SimpleBilly.API.Gewinnverwendung
+      SimpleBilly.API.Gez
+      SimpleBilly.API.GobdExport
+      SimpleBilly.API.GoodsReceipt
+      SimpleBilly.API.GroupFigure
+      SimpleBilly.API.ImportRunner
+      SimpleBilly.API.Institute
+      SimpleBilly.API.InstituteProfile
+      SimpleBilly.API.InventoryCount
+      SimpleBilly.API.InventoryValue
+      SimpleBilly.API.Invoice
+      SimpleBilly.API.JobApplication
+      SimpleBilly.API.JobPosting
+      SimpleBilly.API.Konzern
+      SimpleBilly.API.KostenVorschau
+      SimpleBilly.API.Kst
+      SimpleBilly.API.KycRecord
+      SimpleBilly.API.Lead
+      SimpleBilly.API.LegalDocument
+      SimpleBilly.API.ListOpenItems
+      SimpleBilly.API.MarketplaceApi
+      SimpleBilly.API.Notifications
+      SimpleBilly.API.Offenlegung
+      SimpleBilly.API.Onlineshop
+      SimpleBilly.API.Order
+      SimpleBilly.API.OrderConfirmation
+      SimpleBilly.API.OssReport
+      SimpleBilly.API.Packing
+      SimpleBilly.API.Participation
+      SimpleBilly.API.Paygap
+      SimpleBilly.API.Payment
+      SimpleBilly.API.PaymentCondition
+      SimpleBilly.API.PaymentGateway
+      SimpleBilly.API.Payroll
+      SimpleBilly.API.Peppol
+      SimpleBilly.API.Plausibility
+      SimpleBilly.API.Pos
+      SimpleBilly.API.PostingCategory
+      SimpleBilly.API.PriceTier
+      SimpleBilly.API.Product
+      SimpleBilly.API.ProductAttribute
+      SimpleBilly.API.ProductCategory
+      SimpleBilly.API.ProductVariant
+      SimpleBilly.API.ProductionOrder
+      SimpleBilly.API.ProformaInvoice
+      SimpleBilly.API.ProposeAssignments
+      SimpleBilly.API.PublicReturns
+      SimpleBilly.API.PurchaseOrder
+      SimpleBilly.API.Quotation
+      SimpleBilly.API.RecurringTemplate
+      SimpleBilly.API.ReorderProposal
+      SimpleBilly.API.Replenishment
+      SimpleBilly.API.Reports
+      SimpleBilly.API.ReturnOrder
+      SimpleBilly.API.Rfq
+      SimpleBilly.API.Search
+      SimpleBilly.API.ServiceAssignment
+      SimpleBilly.API.ServiceJob
+      SimpleBilly.API.Shareholder
+      SimpleBilly.API.Shipment
+      SimpleBilly.API.Shipping
+      SimpleBilly.API.ShippingRule
+      SimpleBilly.API.ShippingThreshold
+      SimpleBilly.API.Shop
+      SimpleBilly.API.SilentPartner
+      SimpleBilly.API.Stille
+      SimpleBilly.API.StockMovement
+      SimpleBilly.API.StockTransfer
+      SimpleBilly.API.Suitability
+      SimpleBilly.API.SupplierCondition
+      SimpleBilly.API.SupplierInvoice
+      SimpleBilly.API.SupportChannel
+      SimpleBilly.API.SupportTicket
+      SimpleBilly.API.Tax
+      SimpleBilly.API.TenantSettings
+      SimpleBilly.API.TicketMessage
+      SimpleBilly.API.TimeEntries
+      SimpleBilly.API.TrainingAssignment
+      SimpleBilly.API.Trainings
+      SimpleBilly.API.User
+      SimpleBilly.API.UserManagement
+      SimpleBilly.API.Ustva
+      SimpleBilly.API.Voucher
+      SimpleBilly.API.Warehouse
+      SimpleBilly.API.WarehouseStock
+      SimpleBilly.API.Webhooks
+      SimpleBilly.API.Workflows
+      SimpleBilly.API.Zugferd
+      SimpleBilly.Client
+      SimpleBilly.Core
+      SimpleBilly.Logging
+      SimpleBilly.MimeTypes
+      SimpleBilly.Model
+      SimpleBilly.ModelLens
+  default-language: Haskell2010
+
+  if flag(UseKatip)
+      build-depends: katip >=0.8 && < 1.0
+      other-modules: SimpleBilly.LoggingKatip
+      cpp-options: -DUSE_KATIP
+  else
+      build-depends: monad-logger >=0.3 && <0.4
+      other-modules: SimpleBilly.LoggingMonadLogger
+      cpp-options: -DUSE_MONAD_LOGGER
+
+test-suite tests
+  type: exitcode-stdio-1.0
+  main-is: Test.hs
+  hs-source-dirs:
+      tests
+  ghc-options: -Wall -fno-warn-orphans
+  build-depends:
+      simplebilly
+    , QuickCheck
+    , aeson
+    , base >=4.7 && <5.0
+    , bytestring >=0.10.0
+    , containers
+    , hspec >=1.8
+    , iso8601-time
+    , mtl >=2.2.1
+    , semigroups
+    , text
+    , time
+    , transformers >=0.4.0.0
+    , unordered-containers
+    , vector
+  other-modules:
+      ApproxEq
+      Instances
+      PropMime
+  default-language: Haskell2010
